@@ -150,7 +150,7 @@ class MyApp extends StatelessWidget {
                                 ),
 
                                 Container(
-                                  height: 250,
+                                  height: 390,
 
                                   child: ListView(
                                     padding: EdgeInsets.all(10),
@@ -188,6 +188,16 @@ class MyApp extends StatelessWidget {
                                         leading: Icon(Icons.calendar_today),
                                         title: Text('อายุ'),
                                         subtitle: Text('20 ปี'),
+                                      ),
+                                      ListTile(
+                                        leading: Icon(Icons.self_improvement),
+                                        title: Text('งานอดิเรก'),
+                                        subtitle: Text('เล่นเกม, ฟังเพลง'),
+                                      ),
+                                      ListTile(
+                                        leading: Icon(Icons.straighten),
+                                        title: Text('ส่วนสูง นํ้าหนัก'),
+                                        subtitle: Text('173 cm, 70 kg'),
                                       ),
                                     ],
                                   ),
@@ -290,7 +300,7 @@ class MyApp extends StatelessWidget {
                                   leading: Image.network(
                                     width: 50,
                                     height: 30,
-                                    'https://cdn.discordapp.com/attachments/1248909596379320364/1396853293413564476/Logo_de_Facebook.png?ex=687f9881&is=687e4701&hm=e63cd2effc1763364984b9e068a3a217312d8f92608210735215172b702043d6&',
+                                    'https://i.postimg.cc/pV9JV4tP/Logo-de-Facebook.png',
                                   ),
                                   title: Text('Ton Pummala'),
                                 ),
