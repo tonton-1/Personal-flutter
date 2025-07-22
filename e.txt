@@ -1,0 +1,96 @@
+ Container(
+                        margin: EdgeInsets.only(top: 30),
+                        child: Column(
+                          children: [
+                            Align(
+                              alignment: Alignment.center,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12),
+                                  color: Colors.white,
+                                ),
+                                width: 350,
+                                height: 400,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.fromLTRB(
+                                        20.0,
+                                        20.0,
+                                        10.0,
+                                        0.0,
+                                      ),
+                                      child: Text(
+                                        "ติดต่อ",
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 250,
+
+                                      child: ListView(
+                                        padding: EdgeInsets.all(10),
+                                        physics: NeverScrollableScrollPhysics(),
+                                        children: [
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+
+                                            children: [
+                                              ListTile(
+                                                leading: Image.network(
+                                                  width: 50,
+                                                  height: 30,
+                                                  'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/960px-Instagram_icon.png?20200512141346',
+                                                ),
+                                                title: Text('tonkuay31'),
+                                              ),
+                                              ListTile(
+                                                leading: Image.network(
+                                                  width: 50,
+                                                  height: 30,
+                                                  'https://cdn.discordapp.com/attachments/1248909596379320364/1396853293413564476/Logo_de_Facebook.png?ex=687f9881&is=687e4701&hm=e63cd2effc1763364984b9e068a3a217312d8f92608210735215172b702043d6&',
+                                                ),
+                                                title: Text('Ton Pummala'),
+                                              ),
+                                              ListTile(
+                                                leading: Icon(Icons.phone),
+
+                                                title: Text(
+                                                  'โทรศัพท์: 012-3456789',
+                                                ),
+                                              ),
+                                              ListTile(
+                                                subtitle: Text(
+                                                  'wattanachaipm@gmail.com',
+                                                ),
+                                                leading: Icon(Icons.email),
+                                                title: Text(
+                                                  'อีเมล',
+                                                  style: TextStyle(
+                                                    color: const Color.fromARGB(
+                                                      255,
+                                                      99,
+                                                      110,
+                                                      114,
+                                                    ),
+                                                    fontSize: 13,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
