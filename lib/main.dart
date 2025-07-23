@@ -11,14 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Color.fromARGB(226, 239, 247, 255)),
+      appBar: AppBar(
+        title: Center(child: Text('โปรไฟล์')),
+        backgroundColor: Color.fromARGB(226, 239, 247, 255),
+      ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color.fromARGB(255, 255, 255, 255),
-              Color.fromARGB(210, 229, 245, 238),
-              Color.fromARGB(255, 211, 232, 250),
+              Color.fromARGB(255, 193, 230, 255),
+              Color.fromARGB(210, 198, 238, 250),
+              Color.fromARGB(255, 211, 250, 234),
               Color.fromARGB(172, 205, 231, 253),
             ],
 
@@ -32,6 +35,7 @@ class MyApp extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
+                    SizedBox(height: 20),
                     Column(
                       // รูป ชื่อ ชื่อเล่น
                       children: [
@@ -40,11 +44,16 @@ class MyApp extends StatelessWidget {
                             Align(
                               child: Opacity(
                                 opacity: 0.8,
-                                child: Image.network(
-                                  'https://picsum.photos/350/200',
-                                  fit: BoxFit.cover,
-                                  width: 350,
-                                  height: 230,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(50),
+                                  ),
+                                  child: Image.network(
+                                    'https://picsum.photos/350/200',
+                                    fit: BoxFit.cover,
+                                    width: 350,
+                                    height: 230,
+                                  ),
                                 ),
                               ),
                             ),
@@ -70,7 +79,7 @@ class MyApp extends StatelessWidget {
                                   margin: EdgeInsets.only(top: 20),
 
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
+                                    borderRadius: BorderRadius.circular(2),
                                     color: const Color.fromARGB(
                                       255,
                                       255,
