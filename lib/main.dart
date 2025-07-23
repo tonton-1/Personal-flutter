@@ -16,11 +16,12 @@ class MyApp extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color.fromARGB(255, 255, 255, 255), // ขาวอมเขียวมิ้นต์ (เบาสุด)
-              Color.fromARGB(210, 229, 245, 238), // เขียวพาสเทลสะอาด ๆ
-              Color.fromARGB(255, 211, 232, 250), // ฟ้าน้ำทะเลอ่อน
-              Color.fromARGB(172, 205, 231, 253), // น้ำเงินฟ้า สะอาดแต่มั่นใจ
+              Color.fromARGB(255, 255, 255, 255),
+              Color.fromARGB(210, 229, 245, 238),
+              Color.fromARGB(255, 211, 232, 250),
+              Color.fromARGB(172, 205, 231, 253),
             ],
+
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -150,7 +151,7 @@ class MyApp extends StatelessWidget {
                                 ),
 
                                 Container(
-                                  height: 390,
+                                  height: 620,
 
                                   child: ListView(
                                     padding: EdgeInsets.all(10),
@@ -185,14 +186,45 @@ class MyApp extends StatelessWidget {
                                         subtitle: Text('24 กุมภาพันธ์ 2548'),
                                       ),
                                       ListTile(
-                                        leading: Icon(Icons.calendar_today),
+                                        leading: Icon(
+                                          Icons.temple_buddhist,
+                                          color: Colors.amber,
+                                        ),
+                                        title: Text('ศาสนา'),
+                                        subtitle: Text('พุทธ'),
+                                      ),
+                                      ListTile(
+                                        leading: Icon(
+                                          Icons.calendar_today,
+                                          color: Colors.red,
+                                        ),
                                         title: Text('อายุ'),
                                         subtitle: Text('20 ปี'),
                                       ),
                                       ListTile(
-                                        leading: Icon(Icons.self_improvement),
+                                        leading: Icon(
+                                          Icons.self_improvement,
+                                          color: Color.fromARGB(
+                                            255,
+                                            164,
+                                            187,
+                                            182,
+                                          ),
+                                        ),
                                         title: Text('งานอดิเรก'),
                                         subtitle: Text('เล่นเกม, ฟังเพลง'),
+                                      ),
+                                      ListTile(
+                                        leading: Icon(Icons.restaurant),
+                                        title: Text('เมนูที่ชอบ'),
+                                        subtitle: Text('ผัดกะเพราหมูกรอบ'),
+                                      ),
+                                      ListTile(
+                                        leading: Icon(Icons.fitness_center),
+                                        title: Text('กีฬาที่ชอบ'),
+                                        subtitle: Text(
+                                          'ฟุตบอล, แบดมินตัน, วอลเลย์บอล',
+                                        ),
                                       ),
                                       ListTile(
                                         leading: Icon(Icons.straighten),
@@ -317,7 +349,7 @@ class MyApp extends StatelessWidget {
                                   title: Text('0616549253'),
                                 ),
                                 ListTile(
-                                  title: Text('wattanachaipm@gmail.com'),
+                                  title: Text('wattanachaipum@gmail.com'),
                                   leading: Padding(
                                     padding: const EdgeInsets.fromLTRB(
                                       10,
