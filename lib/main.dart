@@ -35,7 +35,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(title: Text('My Profile'), backgroundColor: Colors.white),
+      appBar: AppBar(
+        title: Center(child: Text('Profile')),
+        backgroundColor: Colors.white,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex,
 
