@@ -87,7 +87,7 @@ class EducationPage extends StatelessWidget {
                 ),
               ),
               title: Text('ปีการศึกษา'),
-              subtitle: Text('2568 - ปัจจุบัน ปี 3'),
+              subtitle: Text('ปัจจุบัน ปี 3'),
             ),
             SizedBox(height: 20),
           ],

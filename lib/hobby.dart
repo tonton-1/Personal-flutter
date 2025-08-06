@@ -69,12 +69,6 @@ class HobbyPage extends StatelessWidget {
                   Color(0xFFD69E2E),
                   Color(0xFFFAF089),
                 ),
-                _buildHobbyCard(
-                  "ถ่ายรูป",
-                  Icons.camera,
-                  Color(0xFF805AD5),
-                  Color(0xFFE9D8FD),
-                ),
               ],
             ),
           ),

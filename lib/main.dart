@@ -17,72 +17,48 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
+//  Info(),
+//       EducationPage(),
+//       HobbyPage(),
+//       SkillPage(),
+//       ContactPage(),
 class _MyAppState extends State<MyApp> {
+  int selectedIndex = 0;
+  List<Widget> pages = [
+    Info(),
+    EducationPage(),
+    HobbyPage(),
+    SkillPage(),
+    ContactPage(),
+  ];
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 5,
-      child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(title: Text('My Profile'), backgroundColor: Colors.white),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: selectedIndex,
 
-        body: Column(
-          children: [
-            Expanded(
-              flex: 10,
-              child: TabBarView(
-                children: [
-                  Info(),
-                  EducationPage(),
-                  HobbyPage(),
-                  ContactPage(),
-                  SkillPage(),
-                ],
-              ),
-            ),
-            Container(
-              color: Colors.amber,
-              child: Container(
-                color: const Color.fromARGB(255, 255, 255, 255),
-
-                child: TabBar(
-                  indicatorColor: Colors.transparent,
-                  indicator: BoxDecoration(
-                    color: const Color.fromARGB(163, 139, 201, 248),
-                    // สีพื้นหลังตอนเลือก
-                    borderRadius: BorderRadius.circular(15), // รูปทรง
-                  ),
-                  indicatorPadding: EdgeInsets.symmetric(
-                    horizontal: 5,
-                    vertical: 15,
-                  ),
-                  tabs: [
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Tab(icon: Icon(Icons.person, size: 30)),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Tab(icon: Icon(Icons.school, size: 30)),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Tab(icon: Icon(Icons.palette, size: 30)),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Tab(icon: Icon(Icons.contact_mail, size: 30)),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Tab(icon: Icon(Icons.star, size: 30)),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
+        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.grey,
+        selectedIconTheme: IconThemeData(size: 30),
+        onTap:
+            (value) => setState(() {
+              selectedIndex = value;
+            }),
+        items: [
+          BottomNavigationBarItem(
+            backgroundColor: const Color.fromARGB(255, 255, 254, 254),
+            icon: Icon(Icons.person),
+            label: '',
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.school), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.palette), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.star), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.contact_mail), label: ''),
+        ],
       ),
+      body: Center(child: pages[selectedIndex]),
     );
   }
 }
